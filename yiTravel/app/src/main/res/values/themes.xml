@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
+        <!-- 设置启动屏背景 -->
+        <item name="windowSplashScreenBackground">@color/splash_background</item>
+
+        <!-- 使用图片 -->
+        <item name="windowSplashScreenAnimatedIcon">@drawable/icon</item>
+        <item name="windowSplashScreenAnimationDuration">1000</item> <!-- 持续时间(ms) -->
+
+        <!-- 或者使用矢量动画 -->
+        <!-- <item name="windowSplashScreenAnimatedIcon">@drawable/ic_logo_animated</item> -->
+    </style>
+    <style name="Theme.UseAi" parent="android:Theme.Material.Light.NoActionBar" />
+</resources>
