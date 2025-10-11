@@ -8,7 +8,6 @@
   <img src="https://github.com/MILK-BIT/Yi-Travel-App/blob/main/image/图片3.png" width="200" height="400" alt="图片3" />
   <img src="https://github.com/MILK-BIT/Yi-Travel-App/blob/main/image/图片4.png" width="200" height="400" alt="图片4" />
   <img src="https://github.com/MILK-BIT/Yi-Travel-App/blob/main/image/图片5.png" width="200" height="400" alt="图片5" />
-  <div style="width: 100%; height: 0;"></div>
   <img src="https://github.com/MILK-BIT/Yi-Travel-App/blob/main/image/图片6.png" width="200" height="400" alt="图片6" />
   <img src="https://github.com/MILK-BIT/Yi-Travel-App/blob/main/image/图片7.png" width="200" height="400" alt="图片7" />
   <img src="https://github.com/MILK-BIT/Yi-Travel-App/blob/main/image/图片8.png" width="200" height="400" alt="图片8" />
