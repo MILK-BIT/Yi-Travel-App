@@ -2,6 +2,6 @@
 plugins {
     id("com.android.application") version "8.9.1" apply false
     id("com.android.library") version "8.9.1" apply false
-    id("org.jetbrains.kotlin.android") version "2.1.20" apply false  // 仅在此声明版本
-    id("org.jetbrains.kotlin.plugin.compose") version "2.0.0" apply false
+    id("org.jetbrains.kotlin.android") version "2.1.20" apply false
+    id("org.jetbrains.kotlin.plugin.compose") version "2.1.20" apply false  // 修改为与 Kotlin 版本匹配
 }

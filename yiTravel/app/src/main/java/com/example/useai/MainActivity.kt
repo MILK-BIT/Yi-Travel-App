@@ -41,9 +41,9 @@ class MainActivity : ComponentActivity() {
         MapsInitializer.updatePrivacyShow(this, true, true)
         MapsInitializer.updatePrivacyAgree(this, true)
 
-        // 然后设置API Key
-        AMapLocationClient.setApiKey("bd31b7d3f7500a8971476600a4ae7c66")
-        MapsInitializer.setApiKey("bd31b7d3f7500a8971476600a4ae7c66")
+        // 使用 BuildConfig 读取 API Key
+        AMapLocationClient.setApiKey(BuildConfig.AMAP_API_KEY)
+        MapsInitializer.setApiKey(BuildConfig.AMAP_API_KEY)
 
         enableEdgeToEdge()
         viewModelFactory = DBViewModelFactory(application)

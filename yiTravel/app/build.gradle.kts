@@ -22,12 +22,18 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        val rawKey = localProperties.getProperty("DEEPSEEK_API_KEY", "").trim()
-        // 验证密钥格式（示例：以 sk_ 开头）
-        if (rawKey.isNotBlank() && !rawKey.startsWith("sk_")) {
+        
+        // DeepSeek API Key
+        val deepseekKey = localProperties.getProperty("DEEPSEEK_API_KEY", "").trim()
+        if (deepseekKey.isNotBlank() && !deepseekKey.startsWith("sk_")) {
             logger.warn("DEEPSEEK_API_KEY 格式可能不正确")
         }
-        buildConfigField("String", "DEEPSEEK_API_KEY", "\"$rawKey\"")
+        buildConfigField("String", "DEEPSEEK_API_KEY", "\"$deepseekKey\"")
+        
+        // 高德地图 API Key
+        val amapKey = localProperties.getProperty("AMAP_API_KEY", "bd31b7d3f7500a8971476600a4ae7c66").trim()
+        manifestPlaceholders["AMAP_API_KEY"] = amapKey
+        buildConfigField("String", "AMAP_API_KEY", "\"$amapKey\"")
     }
 
     buildTypes {
@@ -72,16 +78,16 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.1")
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.1")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1")
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.4.1")
-    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.4.1")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.0")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.7")
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.7")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.8.7")
     implementation ("com.squareup.retrofit2:retrofit:2.9.0")
     implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation ("com.squareup.okhttp3:logging-interceptor:4.11.0")
         implementation("com.squareup.okhttp3:okhttp:4.12.0")  // 使用最新稳定版
-    implementation("androidx.navigation:navigation-compose:2.4.1")
+    implementation("androidx.navigation:navigation-compose:2.8.5")
     implementation ("androidx.compose.runtime:runtime-livedata:1.4.0")
     // Room 核心库
     implementation("androidx.room:room-runtime:$roomVersion")
